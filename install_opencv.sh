@@ -32,12 +32,7 @@ sleep 2
 ##### *********************************************************************************************
 
 echo "Please choose the opencv version you want to install(default version: $OpenCV_version) "
-OpenCV_version=4.5.2
-temp=$OpenCV_version
-if [ ! $OpenCV_version ];
-then
-	OpenCV_version=$temp
-fi
+OpenCV_version=4.1.1
 echo "The version of OpenCV to be installed:" $OpenCV_version
 read -p "Enter OpenCV version or enter key 'Enter' to choose default version: " OpenCV_version
 
