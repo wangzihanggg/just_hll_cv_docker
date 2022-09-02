@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list
-RUN apt update
-RUN apt install git
+RUN apt update -y
+RUN apt install git -y
 RUN git clone https://gitee.com/wangzihang_02/HLL_CV_DOCKER.git
 WORKDIR HLL_CV_DOCKER
 RUN chmod +x install_opencv.sh
