@@ -31,36 +31,9 @@ sleep 2
 ##### Step 0: Get user input OpenCV version
 ##### *********************************************************************************************
 
-echo "Please choose the opencv version you want to install(default version: $OpenCV_version) "
 OpenCV_version=4.1.1
 echo "The version of OpenCV to be installed:" $OpenCV_version
-read -p "Enter OpenCV version or enter key 'Enter' to choose default version: " OpenCV_version
 
-#### *********************************************************************************************
-##### Step 1: Changing source to Tsinghua open source mirror
-##### *********************************************************************************************
-
-if [ ! -e "/etc/apt/sources.list.old" ];
-then
-	codeName=$(echo `lsb_release -c` | cut -d " " -f 2)
-	imageSourcePath="/etc/apt/sources.list"
-
-	sudo cp /etc/apt/sources.list /etc/apt/sources.list.old
-
-	echo "# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释" | sudo tee $imageSourcePath
-	echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-updates main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-updates main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-backports main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-backports main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-security main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-security main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo | sudo tee -a $imageSourcePath
-	echo "# 预发布软件源，不建议启用" | sudo tee -a $imageSourcePath
-	echo "# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-proposed main restricted universe multiverse" | sudo tee -a $imageSourcePath
-	echo "# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $codeName-proposed main restricted universe multiverse" | sudo tee -a $imageSourcePath
-fi
 
 ##### *********************************************************************************************
 ##### Step 2: Update packages
@@ -69,8 +42,8 @@ fi
 echo
 echo "Start updating packages now!"
 add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
-sudo apt-get update -y
-sudo apt-get upgrade -y
+apt-get update -y
+apt-get upgrade -y
 echo "End updating packages!"
 echo
 
