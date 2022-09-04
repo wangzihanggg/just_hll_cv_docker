@@ -43,7 +43,6 @@ echo
 echo "Start updating packages now!"
 add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
 apt-get update -y
-apt-get upgrade -y
 echo "End updating packages!"
 echo
 
