@@ -13,9 +13,9 @@ Control::Control()
            cameraXmlPath = "F:/QT Projects/JUST_HLL_Robomaster_CV/statics/cameraParams.xml";
     QString serialPort = "COM12";
 #elif defined(Q_OS_LINUX)
-    string xmlPath = "/home/hll/projects/JUST_HLL_Robomaster_CV/statics/params.xml",
-           videoPath = "/home/hll/projects/JUST_HLL_Robomaster_CV/red.MOV",
-           cameraXmlPath = "/home/hll/projects/JUST_HLL_Robomaster_CV/statics/cameraParams.xml";
+    string xmlPath = "/HLL_CV_DOCKER/JUST_HLL_Robomaster_CV/statics/params.xml",
+           videoPath = "/red.MOV",
+           cameraXmlPath = "/HLL_CV_DOCKER/JUST_HLL_Robomaster_CV/statics/cameraParams.xml";
     QString serialPort = "ttyUSB0";
 #endif
     Image::Color color = Image::RED;
