@@ -89,17 +89,17 @@ void Control::run()
 //    strftime(tmp, sizeof(tmp), "%Y-%m-%d %H:%M:%S", localtime(&timep));
 
 //    Size size = Size(1280, 720);
-//    VideoWriter writer(string("/home/teliute/video/") + tmp + ".avi", CV_FOURCC('M', 'P', '4', '2'), 30, size);
+//    VideoWriter writer(string("/video/") + tmp + ".avi", CV_FOURCC('M', 'P', '4', '2'), 30, size);
 
     int type = static_cast<int>(video.getVideo().get(CAP_PROP_FOURCC));
-    Size S = Size((int)video.getVideo().get(CAP_PROP_FRAME_WIDTH), (int)video.getVideo().get(CAP_PROP_FRAME_HEIGHT));
+    Size S = Size((int)video.getVideodocker run --name justhllcv -it -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev:/dev -e DISPLAY=$DISPLAY --env="QT_X11_NO_MITSHM=1" 镜像名().get(CAP_PROP_FRAME_WIDTH), (int)video.getVideo().get(CAP_PROP_FRAME_HEIGHT));
     int fps = video.getVideo().get(CAP_PROP_FPS);
 
 //    timep = time(NULL);
 //    strftime(tmp, sizeof(tmp), "%Y-%m-%d %H:%M:%S", localtime(&timep));
 //    cout<<localtime(&timep)<<'\n';
 //    cout<<tmp<<'\n';
-    VideoWriter writer("/home/teliute/test.mp4", type, 30, S, true);
+    VideoWriter writer("/test.mp4", type, 30, S, true);
 
     while(true)
     {
