@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 RUN sed -i "s/security.ubuntu.com/mirrors.aliyun.com/" /etc/apt/sources.list && \
     sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/" /etc/apt/sources.list && \
     sed -i "s/security-cdn.ubuntu.com/mirrors.aliyun.com/" /etc/apt/sources.list
-RUN apt-get clean
+RUN apt clean -y
 RUN apt update -y
 RUN apt install git -y
 RUN git clone https://gitee.com/wangzihang_02/HLL_CV_DOCKER.git
