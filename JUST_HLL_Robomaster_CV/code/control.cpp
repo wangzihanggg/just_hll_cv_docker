@@ -183,7 +183,7 @@ void Control::run()
         serial.writeBytes(armourBlock, frame, findArmourBlock);
 
         //显示原图像(重调大小后)
-        // imshow("srcFile", frame);
+        imshow("srcFile", frame);
 
         //添加运行时间统计
         Tool::setTimeCount(1, Tool::END, "total time");
