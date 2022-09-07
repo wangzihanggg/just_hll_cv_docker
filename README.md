@@ -59,7 +59,7 @@
   - 直接映射 /dev/video0 和 /dev/ttyUSB0
 
   ```bash
-  docker run --rm --name justhllcv -it -v /tmp/.X11-unix:/tmp/.X11-unix --device /dev/ttyUSB0:/dev/ttyUSB0 --device /dev/video0:/dev/video0  -e DISPLAY=$DISPLAY --env="QT_X11_NO_MITSHM=1" 镜像名
+  docker run --name justhllcv -it -v /tmp/.X11-unix:/tmp/.X11-unix --device /dev/ttyUSB0:/dev/ttyUSB0 --device /dev/video0:/dev/video0  -e DISPLAY=$DISPLAY --env="QT_X11_NO_MITSHM=1" 镜像名
   ```
 
   - 映射整个/dev文件夹

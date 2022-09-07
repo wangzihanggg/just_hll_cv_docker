@@ -14,5 +14,6 @@ RUN apt install nano qt5-default qtcreator libqt5serialport5 libqt5serialport5-d
 RUN qmake JUST_HLL_Robomaster_CV.pro
 RUN make clean
 RUN make -j8
+RUN apt install qv4l2 fonts-noto-cjk -y
 RUN apt clean -y
 
