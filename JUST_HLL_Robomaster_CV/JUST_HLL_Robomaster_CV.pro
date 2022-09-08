@@ -10,13 +10,7 @@ QT += xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG+=debug_and_release
-CONFIG(debug, debug|release){
-    TARGET = JUST_HLL_Robomaster_CV
-} else {
-    TARGET = JUST_HLL_Robomaster_CV
-}
-
+TARGET = JUST_HLL_Robomaster_CV
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -98,7 +92,7 @@ DISTFILES += \
     statics/params.xml \
     statics/cameraParams.xml
 
-DEFINES += DEBUG
+#DEFINES += DEBUG
 
 QMAKE_CXXFLAGS += -Wno-sign-compare
 QMAKE_CXXFLAGS += -Wno-covered-switch-default
