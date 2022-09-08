@@ -92,7 +92,7 @@ void Control::run()
 //    VideoWriter writer(string("/video/") + tmp + ".avi", CV_FOURCC('M', 'P', '4', '2'), 30, size);
 
     int type = static_cast<int>(video.getVideo().get(CAP_PROP_FOURCC));
-    Size S = Size((int)video.getVideo run --name justhllcv -it -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev:/dev -e DISPLAY=$DISPLAY --env="QT_X11_NO_MITSHM=1" 镜像名().get(CAP_PROP_FRAME_WIDTH), (int)video.getVideo().get(CAP_PROP_FRAME_HEIGHT));
+    Size S = Size((int)video.getVideo().get(CAP_PROP_FRAME_WIDTH), (int)video.getVideo().get(CAP_PROP_FRAME_HEIGHT));
     int fps = video.getVideo().get(CAP_PROP_FPS);
 
 //    timep = time(NULL);
