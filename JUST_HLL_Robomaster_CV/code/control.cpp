@@ -14,7 +14,7 @@ Control::Control()
     QString serialPort = "COM12";
 #elif defined(Q_OS_LINUX)
     string xmlPath = "/HLL_CV_DOCKER/JUST_HLL_Robomaster_CV/statics/params.xml",
-           videoPath = "/red.MOV",
+           videoPath = "0",
            cameraXmlPath = "/HLL_CV_DOCKER/JUST_HLL_Robomaster_CV/statics/cameraParams.xml";
     QString serialPort = "ttyUSB0";
 #endif
@@ -126,7 +126,7 @@ void Control::run()
         //waitKey(1);
 
         //读取一帧图像
-        video >> frame;
+        camera >> frame;
         writer << frame;
 
         //视频播放完毕跳出程序
