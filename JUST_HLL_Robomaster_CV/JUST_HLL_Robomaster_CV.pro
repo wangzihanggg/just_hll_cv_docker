@@ -42,14 +42,14 @@ INCLUDEPATH += /usr/local/include\
 LIBS += /usr/local/lib/libopencv_*.so.4.1.1
 
 debug{
-OBJECTS_DIR = /home/hll/build-JUST_HLL_Robomaster_CV-Desktop_Qt_5_12_2_GCC_64bit-Debug
+OBJECTS_DIR = /JUST_HLL_Robomaster_CV/build-JUST_HLL_Robomaster_CV-Desktop_Qt_5_12_2_GCC_64bit-Debug
 UI_HEADERS_DIR = $$OBJECTS_DIR
 UI_SOURCES_DIR = $$OBJECTS_DIR
 MOC_DIR = $$OBJECTS_DIR
 DESTDIR = $$OBJECTS_DIR
 }
 release{
-OBJECTS_DIR = /home/hll/build-JUST_HLL_Robomaster_CV-Desktop_Qt_5_12_2_GCC_64bit-Release
+OBJECTS_DIR = /JUST_HLL_Robomaster_CV/build-JUST_HLL_Robomaster_CV-Desktop_Qt_5_12_2_GCC_64bit-Release
 UI_HEADERS_DIR = $$OBJECTS_DIR
 UI_SOURCES_DIR = $$OBJECTS_DIR
 MOC_DIR = $$OBJECTS_DIR
